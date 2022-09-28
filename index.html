@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = "   -   2   +    3  -  3   + 7";
+        function umar(a) {
+            let k =[];
+            b = a.split(" ");
+            let n = 0;
+            for (i = 0; i < b.length; i++) 
+            {
+                if (b[i] == "-" && b[i] != "" || b[i] == "+") {
+                    k.push(b[i]);
+                }
+                if (b[i] == Number(b[i]) && b[i] != "") {
+                    k.push(b[i]);
+                }
+            }
+            console.log(k);
+            for (let j = 0; j < k.length; j+=2) 
+            {
+                console.log(k[j]);
+                n += Number(k[j] + k[j+1])
+            }
+            return n
+        }
+        console.log(umar(str));
+    </script>
+</body>
+</html>
